@@ -52,7 +52,7 @@
     <div class="link__item">
         <p class="link__text">
             アカウントをお持ちでない方はこちらから
-        </p>
+        </p>ん
     </div>
 
     <div class="link__button">
