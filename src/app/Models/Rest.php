@@ -9,10 +9,9 @@ class Rest extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'start_time',
-        'end_time',
+        'start',
+        'end',
         'total',
-        'date',
     ];
     public function attendance() {
         return $this->belongsTo(attendance::class);

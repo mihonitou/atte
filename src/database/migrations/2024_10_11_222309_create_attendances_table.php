@@ -18,9 +18,9 @@ class CreateAttendancesTable extends Migration
             $table->foreignId('user_id')
                 ->constrained('users') // usersテーブルを明示的に指定
                 ->cascadeOnDelete();
-            $table->time('start_time');
-            $table->time('end_time')->nullable();
             $table->date('date');
+            $table->time('start');
+            $table->time('end')->nullable();
             $table->timestamps();
 
             // ユーザーが同じ日に複数の出席データを持たないようにするユニーク制約

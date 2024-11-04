@@ -18,12 +18,12 @@ class CreateRestsTable extends Migration
             $table->foreignId('attendance_id')
                 ->constrained('attendances') // attendancesテーブルを明示的に指定
                 ->cascadeOnDelete();
-            $table->time('start_time');
-            $table->time('end_time')->nullable();
+            $table->time('start');
+            $table->time('end')->nullable();
             $table->timestamps();
 
             // 同じattendance_id内で重複した休憩時間を防ぐためのユニーク制約
-            $table->unique(['attendance_id', 'start_time']);
+            $table->unique(['attendance_id', 'start']);
         });
     }
 
